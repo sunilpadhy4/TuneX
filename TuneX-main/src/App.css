@@ -1,0 +1,255 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoTitle_container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.logo {
+    position: relative;
+    margin-right: 10px;
+    top: 2rem;
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 0.8;
+    position: relative;
+    z-index: 0;
+}
+
+.logo:before,
+.logo:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
+.logo:before {
+    clip-path: polygon(0 0, 100% 50%, 10% 100%, 0 100%);
+    background: linear-gradient(40deg, #00a2ff, #b10e8e);
+}
+
+.logo:after {
+    clip-path: polygon(100% 30%, 100% 50%, 10% 100%, 0% 100%, 0 80%);
+    background: linear-gradient(40deg, #3185c5, #f55778);
+}
+
+
+/* background: linear-gradient(40deg, #ffffff, #ffffff); */
+
+.tools_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    background-image: linear-gradient( to right, #0076fd, #7194ff, #9469dd, #ff6dbd);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.playerControls_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.songAnim_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    width: 35rem;
+    height: 11rem;
+    background-image: linear-gradient( to right, #0076fd, #7194ff, #9469dd, #ff6dbd);
+    border-radius: 10px 10px 0px 0px;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+
+/*
+ box-shadow: inset 0 -5px 5px -5px gray; // (bottom inset)
+box-shadow: inset 0 5px 5px -5px gray; // (top inset)
+box-shadow: inset 5px 0 5px -5px gray; // (left inset)
+box-shadow: inset -5px 0 5px -5px gray; // (right inset)
+*/
+
+.bars {
+    position: relative;
+    left: -1rem;
+    display: flex;
+    height: 25rem;
+    width: fit-content;
+    align-items: center;
+}
+
+.bar {
+    list-style: none;
+    background-color: white;
+    height: 0px;
+    width: 5px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+
+/* 
+background-image: linear-gradient( to right, #0076fd, #7194ff, #9469dd, #ff6dbd);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text; 
+*/
+
+.songDetails_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 3rem;
+    width: 33rem;
+    background-image: linear-gradient( to right, #0076fd, #7194ff, #9469dd, #ff6dbd);
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.seekBar_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    width: 70rem;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 4rem;
+}
+
+.seekBar {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    width: 70rem;
+    cursor: pointer;
+}
+
+.controls_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    width: 70rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.songTime {
+    font-size: 24px;
+    margin-right: 1rem;
+}
+
+.ctrBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 24px;
+    color: white;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.clickSelect {
+    background-color: rgb(255, 38, 0);
+}
+
+.volumeBar {
+    margin-right: 1rem;
+    margin-left: -1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin-left: 3rem;
+        width: 38rem;
+        height: 68.5rem;
+    }
+    .logoTitle_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 13rem;
+        height: 6rem;
+    }
+    .title {
+        font-size: 3rem;
+        height: 4rem;
+    }
+    .logo {
+        position: relative;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+    }
+    .tools_container {
+        position: relative;
+        top: 5rem;
+        width: 37rem;
+        height: 54rem;
+    }
+    .bar {
+        width: 12px;
+        margin: 8px;
+    }
+    .seekBar_container {
+        width: 36rem;
+    }
+    .seekBar {
+        width: 35rem;
+    }
+    .songAnim_container {
+        height: 35rem;
+    }
+    .controls_container {
+        width: 35rem;
+    }
+    .ctrBtn {
+        margin-right: 0rem;
+    }
+    .songTime {
+        margin-right: 0rem;
+    }
+}
